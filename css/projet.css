@@ -13,7 +13,7 @@
     "menu menu"
     "aside main"
     "footer footer";
-    column-gap: 2rem;
+    /* column-gap: 2rem; */
     align-items: start;
 }
 .aside{

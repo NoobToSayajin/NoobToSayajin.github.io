@@ -1,10 +1,5 @@
-/* html{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-} */
 :root{
     --Background: 245,245,245;
-    /* --alpha:0.975; */
     --alpha:0.9;
     --lightBlack: 51,51,51
 }
@@ -22,7 +17,6 @@ body{
     width: 100%;
     min-height: 100vh;
     display: grid;
-    /* grid-template-rows:repeat(auto, minmax(1rem, 1fr)); */
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -30,7 +24,6 @@ body{
     "menu"
     "main"
     "footer";
-    /* align-items: start; */
 }
 body main, body div, .projet-main aside{
     background-color: rgba(var(--Background), var(--alpha));
@@ -101,6 +94,17 @@ body main p{
     margin: 1rem;
     margin-left: 10%;
     margin-right: 10%;
+}
+.acceuil h4{
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+.acceuil .main ul{
+    margin-left: 10%;
+    list-style: none;
+}
+.acceuil .main li::before{
+    content: "⇒ ";
 }
 /*---------------------- Footer ----------------------*/
 footer::before{
@@ -205,7 +209,7 @@ footer::before{
 }
 /*---------------------- Index ----------------------*/
 .acceuil{
-    background-image: url("../Img/Fond/fndAcc.png");
+    background-image: url("/Img/Fond/fndAcc.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -230,7 +234,7 @@ footer::before{
 }
 /*---------------------- Projet ----------------------*/
 .projet{
-    background-image: url("../Img/Fond/projet.png");
+    background-image: url("/Img/Fond/projet.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -240,9 +244,6 @@ footer::before{
     background-attachment: fixed;
 }
 .container{
-    /* border-color: red;
-    border-width: 5px;
-    border-style: dashed; */
     width: 90%;
     height: 90%;
     display: flex;
@@ -250,28 +251,53 @@ footer::before{
     background-color: transparent;
 }
 .one{
-    background-image: url("../Img/Projet/Cards/dataone.png");
+    background-image: url("/Img/Projet/Cards/dataone-2.png");
     background-color: transparent;
 }
 .two{
-    background-image: url("../Img/Projet/Cards/roubaix.png");
+    background-image: url("/Img/Projet/Cards/roubaix-2.png");
     background-color: transparent;
 }
 .three{
-    background-image: url("../Img/Projet/Cards/DataOneTemp.jpg");
+    background-image: url("/Img/Projet/Cards/netforge_2.png");
     background-color: transparent;
 }
+.card img{
+    position: absolute;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: transparent;
+    opacity: 100%;
+    transition: all .7s ease;
+}
+.card div{
+    display: flex;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    flex-direction: column;
+    position: absolute;
+    background-color: transparent;
+}
+.card .card-title{
+    z-index: 5;
+    color: crimson;
+    position: absolute;
+    bottom: 0;
+}
 .card{
-    min-width: 200px;
-    /* border-color: black;
-    border-width: 5px;
-    border-style: dashed; */
+    min-width: 150px;
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
     height: 100%;
     cursor: pointer;
-    flex: 0.2;
+    flex: 0.1;
     margin: 0;
     padding: 0;
     position: relative;
@@ -291,9 +317,14 @@ footer::before{
     filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
     transform: translate(-1%,-1%);
 }
+.card.active img{
+    flex: 6;
+    opacity: 0%;
+    transition: all .825s ease;
+}
 /*---------------------- Veille ----------------------*/
 .veille{
-    background-image: url("../Img/Fond/epreuve.png");
+    background-image: url("/Img/Fond/epreuve.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -324,7 +355,7 @@ footer::before{
 }
 /*---------------------- Experiences ----------------------*/
 .experience{
-    background-image: url("../Img/Fond/cv.png");
+    background-image: url("/Img/Fond/cv.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -354,7 +385,7 @@ footer::before{
 }
 /*---------------------- Epreuves ----------------------*/
 .epreuve{
-    background-image: url("../Img/Fond/epreuve.png");
+    background-image: url("/Img/Fond/epreuve.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

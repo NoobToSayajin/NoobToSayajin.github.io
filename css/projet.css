@@ -1,0 +1,80 @@
+.projet-main{
+    background-image: url("../../Img/Fond/fndAcc.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    grid-template-columns: .2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "menu menu"
+    "aside main"
+    "footer footer";
+    column-gap: 2rem;
+    align-items: start;
+}
+.aside{
+    position: sticky;
+    top: 5%;
+}
+.aside hr{
+    border-color: red;
+}
+.aside a, .projet-main .main a{
+    text-decoration: none;
+    color: crimson;
+}
+.projet-main .main li{
+    list-style: none;
+    padding-left: 7%;
+}
+.projet-main .main .projetDiv{
+    background-color: transparent;
+}
+.projet-main .main .projetDiv a{
+    padding-left: 13%;
+    text-decoration:underline;
+}
+.projet-main .main img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.projet-main .main li::before{
+    content: "⇒ ";
+}
+.projet-main .main h3{
+    color: crimson;
+}
+.projet-main .main h4{
+    padding-left: 10%;
+}
+.cover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.projet-main .main, .projet-main .aside{
+    width: 90%;
+    margin-left: auto;
+}
+.expend li{
+    list-style: none;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+.expend a{
+    color: #111;
+    text-decoration: none;
+}
+.projet-main .aside .Btn{
+    display: block;
+    margin: auto;
+}

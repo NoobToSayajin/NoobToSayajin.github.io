@@ -1,0 +1,6 @@
+.git{
+    width:80%;
+    justify-self: center;
+    background-color: rgba(0, 0, 0, 0);
+    filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
+}

@@ -1,0 +1,15 @@
+table{
+    empty-cells: hide;
+    /* border-collapse: collapse; */
+    border: 2px solid black;
+    margin-left: 10%;
+    box-shadow: 10px 10px 10px rgba(var(--lightBlack), 1);
+}
+th, td{
+    border: 1px solid black;
+    border-spacing: 0px;
+    padding: 0 10px 0 10px;
+}
+.down{
+    color: red;
+}

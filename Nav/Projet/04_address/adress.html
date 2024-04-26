@@ -153,7 +153,7 @@
                 <h3 id="network">Réseaux</h3>
                 <table class="network">
                     <tr>
-                        <th></th>
+                        <th>Class</th>
                         <th>vLAN</th>
                         <th>Nom vLAN</th>
                         <th>@Réseaux</th>
@@ -161,15 +161,15 @@
                         <th>@Broadcast</th>
                     </tr>
                     <tr>
-                        <td>Class A</td>
+                        <td>A</td>
                         <td>LAN0</td>
-                        <td></td>
+                        <td>/</td>
                         <td>10.0.0.0</td>
                         <td>255.255.255.248</td>
                         <td>10.0.0.7</td>
                     </tr>
                     <tr>
-                        <td>Class B</td>
+                        <td>B</td>
                         <td>vLAN 20</td>
                         <td>Server</td>
                         <td>172.16.20.0</td>
@@ -177,7 +177,7 @@
                         <td>172.16.20.255</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>B</td>
                         <td>vLAN 25</td>
                         <td>Backup</td>
                         <td>172.16.25.0</td>
@@ -185,7 +185,7 @@
                         <td>172.16.25.255</td>
                     </tr>
                     <tr>
-                        <td>Class C</td>
+                        <td>C</td>
                         <td>vLAN 11</td>
                         <td>nWAN</td>
                         <td>192.168.122.0</td>
@@ -193,7 +193,7 @@
                         <td>192.168.122.255</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>C</td>
                         <td>vLAN 12</td>
                         <td>cWAN</td>
                         <td>192.168.174.0</td>
@@ -201,7 +201,7 @@
                         <td>192.168.174.255</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>C</td>
                         <td>vLAN 110</td>
                         <td>Direction</td>
                         <td>192.168.10.0</td>
@@ -209,7 +209,7 @@
                         <td>192.168.10.255</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>C</td>
                         <td>vLAN 120</td>
                         <td>Bureau_Etude</td>
                         <td>192.168.20.0</td>
@@ -217,24 +217,24 @@
                         <td>192.168.20.0255</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>C</td>
+                        <td>/</td>
                         <td>HA</td>
                         <td>192.168.0.0</td>
                         <td>255.255.255.252</td>
                         <td>192.168.0.3</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>C</td>
+                        <td>/</td>
                         <td>LAN</td>
                         <td>192.168.1.0</td>
                         <td>255.255.255.248</td>
                         <td>192.168.1.7</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>C</td>
+                        <td>/</td>
                         <td>Localhost</td>
                         <td>192.168.216.0</td>
                         <td>255.255.255.0</td>
@@ -245,7 +245,7 @@
             <div class="projetDiv">
                 <h3 id="firewall">Pare-feu</h3>
                 <h4>Master</h4>
-                <table>
+                <table class="firewall">
                     <tr>
                         <th>Int</th>
                         <th></th>
@@ -265,17 +265,17 @@
                         <td>sFAI</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>em0</td>
                         <td>em0.12</td>
                         <td>vLAN 12</td>
                         <td>cWAN</td>
                         <td>192.168.174.138</td>
                         <td>192.168.174.140</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>em1</td>
-                        <td></td>
+                        <td>/</td>
                         <td>bridge0</td>
                         <td>LAN0</td>
                         <td>10.0.0.2</td>
@@ -284,25 +284,25 @@
                     </tr>
                     <tr>
                         <td>em2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>/</td>
+                        <td>bridge0</td>
+                        <td>LAN0</td>
+                        <td>10.0.0.2</td>
+                        <td>10.0.0.1</td>
                         <td>sCore-2</td>
                     </tr>
                     <tr>
                         <td>em3</td>
-                        <td></td>
+                        <td>/</td>
                         <td>HA</td>
                         <td>HA</td>
                         <td>192.168.0.1</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Pfsense-Backup</td>
                     </tr>
                     <tr>
                         <td>em4</td>
-                        <td></td>
+                        <td>/</td>
                         <td>LAN</td>
                         <td>LAN</td>
                         <td>192.168.1.2</td>
@@ -311,7 +311,7 @@
                     </tr>
                 </table>
                 <h4>Backup</h4>
-                <table>
+                <table class="firewall">
                     <tr>
                         <th>Int</th>
                         <th></th>
@@ -331,17 +331,17 @@
                         <td>sFAI</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>em0</td>
                         <td>em0.12</td>
                         <td>vLAN 12</td>
                         <td>cWAN</td>
                         <td>192.168.174.139</td>
                         <td>192.168.174.140</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>em1</td>
-                        <td></td>
+                        <td>/</td>
                         <td>bridge0</td>
                         <td>LAN0</td>
                         <td>10.0.0.3</td>
@@ -350,25 +350,25 @@
                     </tr>
                     <tr>
                         <td>em2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>/</td>
+                        <td>bridge0</td>
+                        <td>LAN0</td>
+                        <td>10.0.0.3</td>
+                        <td>10.0.0.1</td>
                         <td>sCore-2</td>
                     </tr>
                     <tr>
                         <td>em3</td>
-                        <td></td>
+                        <td>/</td>
                         <td>HA</td>
                         <td>HA</td>
                         <td>192.168.0.2</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Pfsense-Master</td>
                     </tr>
                     <tr>
                         <td>em4</td>
-                        <td></td>
+                        <td>/</td>
                         <td>LAN</td>
                         <td>LAN</td>
                         <td>192.168.1.3</td>
@@ -380,12 +380,9 @@
             <div class="projetDiv">
                 <h3 id="core">Cœur de réseaux</h3>
                 <h4>rCore-1</h4>
-                <table>
+                <table class="router-int">
                     <tr>
-                        <td>Inteface FastEthernet</td>
-                    </tr>
-                    <tr>
-                        <th>Int</th>
+                        <th>Int FastEthernet</th>
                         <th>Sous-Int</th>
                         <th>dot1Q</th>
                         <th>Bridge-Group</th>
@@ -393,15 +390,15 @@
                     </tr>
                     <tr>
                         <td>F0/0</td>
-                        <td></td>
-                        <td></td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>13</td>
                         <td>Pfsense-Master</td>
                     </tr>
                     <tr>
                         <td>F0/1</td>
-                        <td></td>
-                        <td></td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>13</td>
                         <td>Pfsense-Backup</td>
                     </tr>
@@ -413,32 +410,32 @@
                         <td>sCore-1</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.25</td>
                         <td>25</td>
                         <td>25</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.40</td>
                         <td>40</td>
                         <td>40</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.110</td>
                         <td>110</td>
                         <td>110</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.120</td>
                         <td>120</td>
                         <td>120</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>F2/0</td>
@@ -448,39 +445,36 @@
                         <td>sCore-2</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.25</td>
                         <td>25</td>
                         <td>25</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.40</td>
                         <td>40</td>
                         <td>40</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.110</td>
                         <td>110</td>
                         <td>110</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.120</td>
                         <td>120</td>
                         <td>120</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface BVI</td>
-                    </tr>
+                <table class="router-bvi">
                     <tr>
                         <th>Int bvi</th>
                         <th>Groupe</th>
@@ -490,7 +484,7 @@
                     </tr>
                     <tr>
                         <td>bvi 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>110</td>
                         <td>10.0.0.4</td>
                         <td>10.0.0.6</td>
@@ -532,12 +526,9 @@
                     </tr>
                 </table>
                 <h4>rCore-2</h4>
-                <table>
+                <table class="router-int">
                     <tr>
-                        <td>Inteface FastEthernet</td>
-                    </tr>
-                    <tr>
-                        <th>Int</th>
+                        <th>Int FastEthernet</th>
                         <th>Sous-Int</th>
                         <th>dot1Q</th>
                         <th>Bridge-Group</th>
@@ -545,15 +536,15 @@
                     </tr>
                     <tr>
                         <td>F0/0</td>
-                        <td></td>
-                        <td></td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>13</td>
                         <td>Pfsense-Master</td>
                     </tr>
                     <tr>
                         <td>F0/1</td>
-                        <td></td>
-                        <td></td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>13</td>
                         <td>Pfsense-Backup</td>
                     </tr>
@@ -565,32 +556,32 @@
                         <td>sCore-1</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.25</td>
                         <td>25</td>
                         <td>25</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.40</td>
                         <td>40</td>
                         <td>40</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.110</td>
                         <td>110</td>
                         <td>110</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F1/0.120</td>
                         <td>120</td>
                         <td>120</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>F2/0</td>
@@ -600,39 +591,36 @@
                         <td>sCore-2</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.25</td>
                         <td>25</td>
                         <td>25</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.40</td>
                         <td>40</td>
                         <td>40</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.110</td>
                         <td>110</td>
                         <td>110</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>/</td>
                         <td>F2/0.120</td>
                         <td>120</td>
                         <td>120</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface BVI</td>
-                    </tr>
+                <table class="router-bvi">
                     <tr>
                         <th>Int bvi</th>
                         <th>Groupe</th>
@@ -642,7 +630,7 @@
                     </tr>
                     <tr>
                         <td>bvi 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>90</td>
                         <td>10.0.0.5</td>
                         <td>10.0.0.6</td>
@@ -684,12 +672,9 @@
                     </tr>
                 </table>
                 <h4>sCore-1</h4>
-                <table>
+                <table class="switch-int">
                     <tr>
-                        <td>Interface Ethernet</td>
-                    </tr>
-                    <tr>
-                        <th>Int</th>
+                        <th>Int Ethernet</th>
                         <th>Type</th>
                         <th>vLAN</th>
                         <th>Connecté à</th>
@@ -714,9 +699,9 @@
                     </tr>
                     <tr>
                         <td>E0/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td>1</td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/0</td>
@@ -744,10 +729,7 @@
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface vLAN</td>
-                    </tr>
+                <table class="switch-bvi">
                     <tr>
                         <th>Int vLAN</th>
                         <th>vLAN</th>
@@ -757,9 +739,9 @@
                     </tr>
                     <tr>
                         <td>vLAN 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>natif</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root primary</td>
                     </tr>
                     <tr>
@@ -780,29 +762,26 @@
                         <td>vLAN 40</td>
                         <td>40</td>
                         <td>vLAN_LAN_Admin</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root primary</td>
                     </tr>
                     <tr>
                         <td>vALN 110</td>
                         <td>110</td>
                         <td>vLAN_Direction</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root primary</td>
                     </tr>
                     <tr>
                         <td>vLAN 120</td>
                         <td>120</td>
                         <td>vLAN_Bureau_Etude</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root primary</td>
                     </tr>
                 </table>
                 <h4>sCore-2</h4>
-                <table>
-                    <tr>
-                        <td>Interface Ethernet</td>
-                    </tr>
+                <table class="switch-int">
                     <tr>
                         <th>Int</th>
                         <th>Type</th>
@@ -829,9 +808,9 @@
                     </tr>
                     <tr>
                         <td>E0/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td>1</td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/0</td>
@@ -859,10 +838,7 @@
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface vLAN</td>
-                    </tr>
+                <table class="switch-bvi">
                     <tr>
                         <th>Int vLAN</th>
                         <th>vLAN</th>
@@ -872,9 +848,9 @@
                     </tr>
                     <tr>
                         <td>vLAN 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>natif</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root secondary</td>
                     </tr>
                     <tr>
@@ -895,21 +871,21 @@
                         <td>vLAN 40</td>
                         <td>40</td>
                         <td>vLAN_LAN_Admin</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root secondary</td>
                     </tr>
                     <tr>
                         <td>vALN 110</td>
                         <td>110</td>
                         <td>vLAN_Direction</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root secondary</td>
                     </tr>
                     <tr>
                         <td>vLAN 120</td>
                         <td>120</td>
                         <td>vLAN_Bureau_Etude</td>
-                        <td></td>
+                        <td>/</td>
                         <td>root secondary</td>
                     </tr>
                 </table>
@@ -917,10 +893,7 @@
             <div class="projetDiv">
                 <h3 id="distribution">Distribution</h3>
                 <h4>sSrv</h4>
-                <table>
-                    <tr>
-                        <td>Interface Ethernet</td>
-                    </tr>
+                <table class="switch-int">
                     <tr>
                         <th>Int</th>
                         <th>Type</th>
@@ -941,15 +914,15 @@
                     </tr>
                     <tr>
                         <td>E0/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E0/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/0</td>
@@ -971,9 +944,9 @@
                     </tr>
                     <tr>
                         <td>E1/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/0</td>
@@ -989,46 +962,43 @@
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface vLAN</td>
-                    </tr>
+                <table class="switch-bvi">
                     <tr>
                         <th>Int vLAN</th>
                         <th>vLAN</th>
@@ -1038,9 +1008,9 @@
                     </tr>
                     <tr>
                         <td>vLAN 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>natif</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
@@ -1061,29 +1031,26 @@
                         <td>vLAN 40</td>
                         <td>40</td>
                         <td>vLAN_LAN_Admin</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vALN 110</td>
                         <td>110</td>
                         <td>vLAN_Direction</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vLAN 120</td>
                         <td>120</td>
                         <td>vLAN_Bureau_Etude</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                 </table>
                 <h4>sBckp</h4>
-                <table>
-                    <tr>
-                        <td>Interface Ethernet</td>
-                    </tr>
+                <table class="switch-int">
                     <tr>
                         <th>Int</th>
                         <th>Type</th>
@@ -1104,15 +1071,15 @@
                     </tr>
                     <tr>
                         <td>E0/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E0/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/0</td>
@@ -1134,64 +1101,61 @@
                     </tr>
                     <tr>
                         <td>E1/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface vLAN</td>
-                    </tr>
+                <table class="switch-bvi">
                     <tr>
                         <th>Int vLAN</th>
                         <th>vLAN</th>
@@ -1201,9 +1165,9 @@
                     </tr>
                     <tr>
                         <td>vLAN 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>natif</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
@@ -1224,29 +1188,26 @@
                         <td>vLAN 40</td>
                         <td>40</td>
                         <td>vLAN_LAN_Admin</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vALN 110</td>
                         <td>110</td>
                         <td>vLAN_Direction</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vLAN 120</td>
                         <td>120</td>
                         <td>vLAN_Bureau_Etude</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                 </table>
                 <h4>sStage-1</h4>
-                <table>
-                    <tr>
-                        <td>Interface Ethernet</td>
-                    </tr>
+                <table class="switch-int">
                     <tr>
                         <th>Int</th>
                         <th>Type</th>
@@ -1267,15 +1228,15 @@
                     </tr>
                     <tr>
                         <td>E0/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E0/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/0</td>
@@ -1291,70 +1252,67 @@
                     </tr>
                     <tr>
                         <td>E1/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface vLAN</td>
-                    </tr>
+                <table class="switch-bvi">
                     <tr>
                         <th>Int vLAN</th>
                         <th>vLAN</th>
@@ -1364,9 +1322,9 @@
                     </tr>
                     <tr>
                         <td>vLAN 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>natif</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
@@ -1387,29 +1345,26 @@
                         <td>vLAN 40</td>
                         <td>40</td>
                         <td>vLAN_LAN_Admin</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vALN 110</td>
                         <td>110</td>
                         <td>vLAN_Direction</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vLAN 120</td>
                         <td>120</td>
                         <td>vLAN_Bureau_Etude</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                 </table>
                 <h4>sStage-2</h4>
-                <table>
-                    <tr>
-                        <td>Interface Ethernet</td>
-                    </tr>
+                <table class="switch-int">
                     <tr>
                         <th>Int</th>
                         <th>Type</th>
@@ -1430,15 +1385,15 @@
                     </tr>
                     <tr>
                         <td>E0/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E0/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/0</td>
@@ -1454,70 +1409,67 @@
                     </tr>
                     <tr>
                         <td>E1/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E1/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E2/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/0</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/1</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/2</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                     <tr>
                         <td>E3/3</td>
-                        <td></td>
+                        <td>/</td>
                         <td class="down">Interface Down</td>
-                        <td></td>
+                        <td>/</td>
                     </tr>
                 </table>
                 <br>
-                <table>
-                    <tr>
-                        <td>Interface vLAN</td>
-                    </tr>
+                <table class="switch-bvi">
                     <tr>
                         <th>Int vLAN</th>
                         <th>vLAN</th>
@@ -1527,9 +1479,9 @@
                     </tr>
                     <tr>
                         <td>vLAN 1</td>
-                        <td>1</td>
+                        <td>/</td>
                         <td>natif</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
@@ -1550,28 +1502,28 @@
                         <td>vLAN 40</td>
                         <td>40</td>
                         <td>vLAN_LAN_Admin</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vALN 110</td>
                         <td>110</td>
                         <td>vLAN_Direction</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                     <tr>
                         <td>vLAN 120</td>
                         <td>120</td>
                         <td>vLAN_Bureau_Etude</td>
-                        <td></td>
+                        <td>/</td>
                         <td>Auto</td>
                     </tr>
                 </table>
             </div>
             <div class="projetDiv">
                 <h3 id="servers">Serveurs</h3>
-                <table>
+                <table class="servers">
                     <tr>
                         <th>Nom</th>
                         <th>vLAN</th>

@@ -1,4 +1,4 @@
-@media screen and (min-width:1024px){
+@media only screen and (min-width:1024px){
     .projet-main{
         background-image: url("../../Img/Fond/fndAcc.png");
         -webkit-background-size: cover;
@@ -27,7 +27,7 @@
         padding-bottom: 0;
     }
 }
-@media screen and (max-width:1023px){
+@media only screen and (max-width:1023px){
     .projet-main{
         background-image: url("../../Img/Fond/fndAcc.png");
         -webkit-background-size: cover;

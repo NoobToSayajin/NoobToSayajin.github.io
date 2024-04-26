@@ -182,11 +182,14 @@
         margin: 0;
         margin-bottom: 1rem;
         width: 98vw;
-        border-color: red;
+        border-color: rgb(var(--titleRed));
         border-style: groove;
         font-variant: small-caps;
         font-weight: 500;
         /* transition: all 0.2s ease-in-out; */
+    }
+    .cv h4{
+        padding-left: 2%;
     }
     /*---------------------- Epreuves ----------------------*/
     .epreuve{

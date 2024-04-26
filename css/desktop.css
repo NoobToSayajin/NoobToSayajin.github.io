@@ -261,7 +261,7 @@
     .cv{
         background-color: rgba(var(--Background), var(--alpha));
         padding: 1%;
-        border-color: red;
+        border-color: rgb(var(--titleRed));
         border-style: groove;
         font-variant: small-caps;
         font-weight: 500;

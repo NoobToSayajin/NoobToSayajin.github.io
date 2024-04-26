@@ -4,27 +4,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/git.css">
         <link rel="stylesheet" href="/css/projet.css">
+        <link rel="stylesheet" href="/css/mobile.css">
+        <link rel="stylesheet" href="/css/desktop.css">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="/scripts/projetElement.js" defer></script>
+        <script src="/scripts/burger.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Lora:ital@1&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Portfolio</title>
     </head>
     <body class="projet-main">
         <header class="header">
+            <br>
+            <br>
             <h1>Portfolio BTS SIO SISR</h1>
         </header>
         <menu class="menu">
-            <li><a href="/index.html">Acceuil</a></li>
-            <li><a href="/Nav/cv.html">Mes Expériences</a></li>
-            <li><a href="/Nav/projets.html">Projets</a></li>
-            <li><a href="/Nav/epreuves.html">Épreuve</a></li>
-            <li><a href="/Nav/veille.html">Veille Technologique</a></li>
+            <button class="burger mobile" id="burger">
+                <span class="burgerIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="pSideBar" id="pSideBar">
+                <ul>
+                    <li><a href="/index.html">Acceuil</a></li>
+                    <li><a href="/Nav/cv.html">Mes Expériences</a></li>
+                    <li><a href="/Nav/projets.html">Projets</a></li>
+                    <li><a href="/Nav/epreuves.html">Épreuve</a></li>
+                    <li><a href="/Nav/veille.html">Veille Technologique</a></li>
+                </ul>
+                <ul class="mobile contact">
+                    <li><a href="mailto:merieljulien.mj@gmail.com"><img src="/Img/Icon/mail.png" alt="" srcset=""></a></li>
+                    <li><a href="http://www.linkedin.com/in/julien-m-3154631b0" target="_blank" rel="noopener noreferrer"><img src="/Img/Icon/LinkedIn.png" alt="" srcset=""></a></li>
+                    <li><a href="http://www.github.com/NoobToSayajin" target="_blank" rel="noopener noreferrer"><img src="/Img/Icon/gitHub.png" alt="" srcset=""></a></li>
+                    <br>
+                </ul>
+            </div>
         </menu>
         <aside class="aside">
-            <h2><a href="/Nav/Projet/main.html">Index</a></h2>
+            <h2><a href="/Nav/Projet/main.html">Présentation</a></h2>
             <hr>
-            <h2>Sommaire</h2>
+            <details class="index" id="index">
+                <summary>Sommaire</summary>
             <ul class="expend">
                 <li><a href="/Nav/Projet/01_objectif/objectif.html">Objectif du projet</a></li>
                 <li><a href="/Nav/Projet/02_materiel/liste.html">Matériel</a></li>
@@ -121,9 +146,7 @@
                 </ul>
             <button type="button" class="Btn pdfProjet"><span>Version PDF</span></button>
         </aside>
-        <script>
-            document.querySelector(".pdfProjet").onclick = function() {window.open("/pdf/Cahier_des_charges.pdf", "_blank");}
-        </script>
+
         <main class="main">
             <h2>Windows Server 2022</h2>
             <h3>DCBackup</h3>

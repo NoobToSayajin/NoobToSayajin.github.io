@@ -2,22 +2,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/mobile.css">
+        <link rel="stylesheet" href="/css/desktop.css">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="/scripts/projetElement.js" defer></script>
+        <script src="/scripts/burger.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Lora:ital@1&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Portfolio</title>
     </head>
     <body class="veille">
         <header class="header">
+            <br>
+            <br>
             <h1>Portfolio BTS SIO SISR</h1>
         </header>
         <menu class="menu">
-            <li><a href="/index.html">Acceuil</a></li>
-            <li><a href="/Nav/cv.html">Mes Expériences</a></li>
-            <li><a href="/Nav/projets.html">Projets</a></li>
-            <li><a href="/Nav/epreuves.html">Épreuve</a></li>
-            <li><a href="/Nav/veille.html">Veille Technologique</a></li>
+            <button class="burger mobile" id="burger">
+                <span class="burgerIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="pSideBar" id="pSideBar">
+                <ul>
+                    <li><a href="/index.html">Acceuil</a></li>
+                    <li><a href="/Nav/cv.html">Mes Expériences</a></li>
+                    <li><a href="/Nav/projets.html">Projets</a></li>
+                    <li><a href="/Nav/epreuves.html">Épreuve</a></li>
+                    <li><a href="/Nav/veille.html">Veille Technologique</a></li>
+                </ul>
+                <ul class="mobile contact">
+                    <li><a href="mailto:merieljulien.mj@gmail.com"><img src="/Img/Icon/mail.png" alt="" srcset=""></a></li>
+                    <li><a href="http://www.linkedin.com/in/julien-m-3154631b0" target="_blank" rel="noopener noreferrer"><img src="/Img/Icon/LinkedIn.png" alt="" srcset=""></a></li>
+                    <li><a href="http://www.github.com/NoobToSayajin" target="_blank" rel="noopener noreferrer"><img src="/Img/Icon/gitHub.png" alt="" srcset=""></a></li>
+                    <br>
+                </ul>
+            </div>
         </menu>
         <main class="main">
             <h2>Veille Technologique</h2>

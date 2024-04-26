@@ -1,0 +1,233 @@
+@media screen and (max-width: 1023px) {
+    html, body{
+        /* -ms-overflow-style: none;
+        scrollbar-width: none; */
+        text-align: left;
+    }
+    .header{
+        grid-area: header;
+    }
+    body main, body div, .projet-main aside{
+        background-color: rgba(var(--Background), var(--alpha));
+        border-radius: 1rem;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 1rem;
+        margin: 1rem auto 1rem auto;
+        text-align:left;
+        text-wrap: balance;
+    }
+    /*---------------------- menu ----------------------*/
+    .menu .pSideBar{
+        display: grid;
+        grid-template-areas: 
+        'list'
+        'foot'
+        ;
+        grid-template-rows: 1fr auto;
+        background-color: rgba(var(--Background), 1);
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        z-index: 50;
+        top: 0;
+        left: -100%;
+        transition: left 0.5s ease;
+    }
+    .menu a{
+        color: rgb(var(--link));
+        padding: 8px 8px 8px 32px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+    }
+    .menu .pSideBar ul{
+        list-style: none;
+        padding: 0;
+        padding-top: 2rem;
+        margin: 0;
+        margin-top: 60px;
+    }
+    .pSideBar.active{
+        left: 0;
+    }
+    .burger{
+        position: fixed;
+        top: 25px;
+        left: 32px;
+        font-size: 36px;
+        z-index: 51;
+        box-shadow: -1px -1px 5px rgba(0,0,0,0.3), 1px 1px 5px rgba(255,255,255,0.6), inset -2px -2px 5px rgba(0,0,0,0.3), inset 2px 2px 4px rgba(255,255,255,0.6);
+    }
+    .burger.active{
+        box-shadow: -1px -1px 5px rgba(255,255,255,0.6), 1px 1px 5px rgba(0,0,0,0.3), inset -2px -2px 5px rgba(255,255,255,1), inset 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .burger::after{
+        color: red;
+    }
+    .burgerIcon span{
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: rgb(var(--crimsonRed));
+        margin: 6px 0;
+    }
+    .contact{
+        display: grid;
+        list-style: none;
+        background-color: rgba(var(--lightBlack), 1);
+        color: rgb(var(--Background));
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .contact img{
+        height: 25px;
+    }
+    .contact li{
+        list-style: none;
+        text-align: center;
+    }
+    /*---------------------- Footer ----------------------*/
+    footer::before{
+        position: sticky;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: rgba(var(--lightBlack), 1);
+        color: rgb(var(--Background));
+        text-align: center;
+        padding: 0;
+        padding-top: 0;
+        bottom: 0;
+        width: 100%;
+        overflow-y: hidden;
+        height: 0;
+    }
+    .gridFooter{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .gridFooter ul{
+        display: grid;
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: 1fr;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .gridFooter li{
+        list-style: none;
+        text-align: center;
+    }
+    .gridFooter img{
+        height: 25px;
+    }
+    .gridFooter a{
+        color: var(--Background);
+        text-decoration:none;
+    }
+    .gridFooter a:link{
+        color: var(--Background);
+        text-decoration:none;
+    }
+    .gridFooter a:visited{
+        color: var(--Background);
+        text-decoration:none;
+    }
+    .acceuil{
+        background-image: url("/Img/Fond/fndAcc.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    /*---------------------- Projet ----------------------*/
+    .projet{
+        background-image: url("/Img/Fond/projet.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .projet .main{
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+    .container{
+        width: 90%;
+        height: 90%;
+        display: grid;
+        grid-template-areas:
+        'card-one'
+        'card-two'
+        'card-three'
+        ;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        background-color: transparent;
+    }
+    .card.one{
+        grid-area: card-one;
+        height: 100%;
+    }
+    .card.two{
+        grid-area: card-two;
+        height: 100%;
+    }
+    .card.three{
+        grid-area: card-three;
+        height: 100%;
+    }
+    .card{
+        margin: 0;
+        padding: 0;
+        height: 10%;
+    }
+    .card img{
+        grid-area: img;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        width: 100%;
+        background-color: transparent;
+    }
+    .card div{
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+    }
+    .card .card-title{
+        grid-area: title;
+        color: rgb(var(--crimsonRed));
+    }
+    .card .card-Content{
+        display: grid;
+        grid-template-areas: 
+        'img'
+        'title'
+        ;
+        grid-template-rows: 1fr auto;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+    }
+}

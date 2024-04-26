@@ -1,0 +1,302 @@
+@media screen and (min-width:1024px){
+    .mobile{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    body main, body div, .projet-main aside{
+        background-color: rgba(var(--Background), var(--alpha));
+        border-radius: 1rem;
+        width: 80%;
+        padding: 0;
+        padding-bottom: 1rem;
+        margin: 1rem auto 1rem auto;
+        text-align:justify;
+    }
+    .burger{
+        padding: 0;
+        margin: 0;
+    }
+    menu{
+        grid-area: menu;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        list-style: none;
+        background-color: rgba(var(--lightBlack), 1);
+        margin: 0;
+        padding: 0;
+        padding-left: 10%;
+        height: 3.5rem;
+        overflow-y: hidden;
+    }
+    .pSideBar{
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    menu li{
+        float: left;
+    }
+    menu li a{
+        display: block;
+        color: rgb(var(--Background));
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-bottom: 2px solid rgb(51, 51, 51);
+    }
+    menu::after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+    menu li a:hover{
+        background-color: #111;
+        border-bottom: 2px solid rgb(var(--Background));
+    }
+    /*---------------------- Footer ----------------------*/
+    footer::before{
+        position: sticky;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: rgba(var(--lightBlack), 1);
+        color: rgb(var(--Background));
+        text-align: center;
+        padding: 0;
+        padding-top: 1rem;
+        bottom: 0;
+        width: 100%;
+    }
+    .gridFooter{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .gridFooter ul{
+        display: grid;
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: 1fr;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .gridFooter li{
+        list-style: none;
+        text-align: center;
+    }
+    .gridFooter img{
+        height: 25px;
+    }
+    .gridFooter a{
+        color: var(--Background);
+        text-decoration:none;
+    }
+    .gridFooter a:link{
+        color: var(--Background);
+        text-decoration:none;
+    }
+    .gridFooter a:visited{
+        color: var(--Background);
+        text-decoration:none;
+    }
+
+    /*---------------------- Index ----------------------*/
+    .acceuil{
+        background-image: url("/Img/Fond/fndAcc.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-template-columns: 60% 1fr;
+        grid-template-areas:
+        "header header"
+        "menu menu"
+        "main aside"
+        "footer footer";
+    }
+    .acceuil main{
+        overflow-y: hidden;
+        height: 80%;
+        width: 60%;
+        margin-bottom: 2rem;
+        margin: 1rem auto 1rem auto;
+        align-self: center;
+    }
+    .acceuil main:hover, .acceuil main:active, .acceuil main:focus{
+        overflow-y: auto;
+    }
+    .acceuil .main li{
+        padding-bottom: 0;
+    }
+/*---------------------- veille ----------------------*/
+.gridVeille div:hover{
+    /* box-shadow: 0 0 25px #ffffff; */
+    filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
+    transform: translate(-2%,-2%);
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+/*---------------------- Projet ----------------------*/
+    .projet{
+        background-image: url("/Img/Fond/projet.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .container{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        gap: 10px;
+        background-color: transparent;
+    }
+    .one{
+        background-image: url("/Img/Projet/Cards/dataone-2.png");
+        background-color: transparent;
+    }
+    .two{
+        background-image: url("/Img/Projet/Cards/roubaix-2.png");
+        background-color: transparent;
+    }
+    .three{
+        background-image: url("/Img/Projet/Cards/netforge_2.png");
+        background-color: transparent;
+    }
+    .card img{
+        position: absolute;
+        height: 100%;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        background-color: transparent;
+        opacity: 100%;
+        transition: all .7s ease;
+    }
+    .card div{
+        display: flex;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        flex-direction: column;
+        position: absolute;
+        background-color: transparent;
+    }
+    .card .card-title{
+        z-index: 5;
+        color: rgb(var(--crimsonRed));
+        position: absolute;
+        bottom: 0;
+    }
+    .card{
+        min-width: 150px;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        height: 100%;
+        cursor: pointer;
+        flex: 0.1;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transition: all 0.7s ease-out;
+        display: flex;
+        align-items: flex-end;
+    }
+    .card .card-Content{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+    }
+    .card.active{
+        flex: 6;
+        filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
+        transform: translate(-1%,-1%);
+    }
+    .card.active img{
+        flex: 6;
+        opacity: 0%;
+        transition: all .825s ease;
+    }
+    /*---------------------- Experiences ----------------------*/
+    .experience{
+        background-image: url("/Img/Fond/cv.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .Exp-Pro{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .formation{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .cv{
+        background-color: rgba(var(--Background), var(--alpha));
+        padding: 1%;
+        border-color: red;
+        border-style: groove;
+        font-variant: small-caps;
+        font-weight: 500;
+        /* transition: all 0.2s ease-in-out; */
+    }
+    /*---------------------- Epreuves ----------------------*/
+    .epreuve{
+        background-image: url("/Img/Fond/epreuve.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .listing ul{
+        width: 80%;
+        margin: auto;
+        text-align:justify;
+    }
+    .listing ul p{
+        margin: 0 2rem 0 2rem;
+    }
+    .listing ul li{
+        margin: 0 2rem 0 3rem;
+    }
+    .listing span{
+        font-weight: bold;
+    }
+    /*---------------------- Projet ----------------------*/
+    details{
+        cursor: pointer;
+        font-family: 'Lora', serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}

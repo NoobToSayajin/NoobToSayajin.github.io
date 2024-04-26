@@ -1,13 +1,63 @@
 :root{
     --Background: 245,245,245;
     --alpha:0.9;
-    --lightBlack: 51,51,51
+    --lightBlack: 51,51,51;
+    --titleRed: 255,0,0;
+    --crimsonRed: 220,20,60;
+    --link: 255,0,0;
 }
 *{
     box-sizing: inherit;
+    text-wrap: balance;
 }
+html{
+    font-size: 1rem;
+}
+/*---------------------- Boutton ----------------------*/
+.Btn {
+    padding: 12px 24px;
+    cursor: pointer;
+    color: rgb(var(--crimsonRed));
+    position: relative;
+    border-radius: 1rem;
+    border-color: rgb(var(--crimsonRed));
+    border-style: groove;
+    overflow: hidden;
+    z-index: 1;
+}
+.Btn span {
+    z-index: 1;
+    position: relative;
+}
+.Btn span{
+    color: #111;
+    text-decoration-color: rgb(var(--crimsonRed));
+    text-decoration-line: none;
+}
+.Btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
+    background-color: rgb(var(--crimsonRed));
+    opacity: 0;
+}
+.Btn:hover span{
+    color: hsl(222, 100%, 95%);
+}
+.Btn:hover::before {
+    opacity: 1;
+    transition-duration: .85s;
+    transform: translate3d(-50%,-50%,0) scale3d(1.2,1.2,1.2);
+}
+/*---------------------- main ----------------------*/
 a{
-    color: red;
+    color: var(--link);
     font-weight: bold;
 }
 body{
@@ -25,15 +75,6 @@ body{
     "main"
     "footer";
 }
-body main, body div, .projet-main aside{
-    background-color: rgba(var(--Background), var(--alpha));
-    border-radius: 1rem;
-    width: 80%;
-    padding: 0;
-    padding-bottom: 1rem;
-    margin: 1rem auto 1rem auto;
-    text-align:justify;
-}
 header{
     grid-area: header;
     padding-left: 1.5rem;
@@ -43,51 +84,22 @@ header{
 }
 header H1{
     font-family: 'Montserrat', sans-serif;
-    color: red;
+    color: rgb(var(--titleRed));
 }
 body H2{
     font-family: 'Montserrat', sans-serif;
-    color: crimson;
+    color: rgb(var(--crimsonRed));
     padding-top: 1rem;
     margin-left: 4%;
+    margin-right: 4%;
 }
 body H3{
     font-family: 'Lora', serif;
     margin-left: 7%;
+    margin-right: 7%;
 }
 body H4{
     font-family: 'Montserrat', sans-serif;
-}
-menu{
-    grid-area: menu;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    list-style: none;
-    background-color: rgba(var(--lightBlack), 1);
-    margin: 0;
-    padding: 0;
-    padding-left: 10%;
-}
-menu li{
-    float: left;
-}
-menu li a{
-    display: block;
-    color: whitesmoke;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-bottom: 2px solid rgb(51, 51, 51);
-}
-menu::after{
-    content:"";
-    display: table;
-    clear: both;
-}
-menu li a:hover{
-    background-color: #111;
-    border-bottom: 2px solid whitesmoke;
 }
 body main p{
     padding-bottom: 1rem;
@@ -95,232 +107,22 @@ body main p{
     margin-left: 10%;
     margin-right: 10%;
 }
+/*---------------------- acceuil ----------------------*/
 .acceuil h4{
     margin-left: 10%;
     font-family: 'Montserrat', sans-serif;
 }
 .acceuil .main ul{
     margin-left: 10%;
+    margin-right: 10%;
     list-style: none;
+}
+.acceuil .main li{
+    padding-bottom: 1rem;
 }
 .acceuil .main li::before{
     content: "⇒ ";
-}
-/*---------------------- Footer ----------------------*/
-footer::before{
-    position: sticky;
-
-}
-.footer{
-    grid-area: footer;
-    background-color: rgba(var(--lightBlack), 1);
-    color: whitesmoke;
-    text-align: center;
-    padding: 0;
-    padding-top: 1rem;
-    bottom: 0;
-    width: 100%;
-}
-.gridFooter{
-    background-color: rgba(0, 0, 0, 0);
-}
-.gridFooter ul{
-    display: grid;
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr;
-    justify-items: center;
-    justify-content: space-between;
-}
-.gridFooter li{
-    list-style: none;
-    text-align: center;
-}
-.gridFooter img{
-    height: 25px;
-}
-.gridFooter a{
-    color: var(--Background);
-    text-decoration:none;
-}
-.gridFooter a:link{
-    color: var(--Background);
-    text-decoration:none;
-}
-.gridFooter a:visited{
-    color: var(--Background);
-    text-decoration:none;
-}
-.BckgrdVd{
-    object-fit: cover;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-/*---------------------- Boutton ----------------------*/
-.Btn {
-    padding: 12px 24px;
-    cursor: pointer;
-    color: crimson;
-    position: relative;
-    border-radius: 6px;
-    border-color: crimson;
-    border-style: groove;
-    overflow: hidden;
-    z-index: 1;
-}
-.Btn span {
-    z-index: 1;
-    position: relative;
-}
-.Btn span{
-    color: #111;
-    text-decoration-color: crimson;
-    text-decoration-line: none;
-}
-.Btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
-    transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
-    background-color: crimson;
-    opacity: 0;
-}
-.Btn:hover span{
-    color: hsl(222, 100%, 95%);
-}
-.Btn:hover::before {
-    opacity: 1;
-    transition-duration: .85s;
-    transform: translate3d(-50%,-50%,0) scale3d(1.2,1.2,1.2);
-}
-/*---------------------- Index ----------------------*/
-.acceuil{
-    background-image: url("/Img/Fond/fndAcc.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    grid-template-columns: 60% 1fr;
-    grid-template-areas:
-    "header header"
-    "menu menu"
-    "main aside"
-    "footer footer";
-}
-.acceuil main{
-    overflow-y: auto;
-    height: 80%;
-    width: 60%;
-    margin-bottom: 2rem;
-    margin: 1rem auto 1rem auto;
-    align-self: center;
-}
-/*---------------------- Projet ----------------------*/
-.projet{
-    background-image: url("/Img/Fond/projet.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.container{
-    width: 90%;
-    height: 90%;
-    display: flex;
-    gap: 10px;
-    background-color: transparent;
-}
-.one{
-    background-image: url("/Img/Projet/Cards/dataone-2.png");
-    background-color: transparent;
-}
-.two{
-    background-image: url("/Img/Projet/Cards/roubaix-2.png");
-    background-color: transparent;
-}
-.three{
-    background-image: url("/Img/Projet/Cards/netforge_2.png");
-    background-color: transparent;
-}
-.card img{
-    position: absolute;
-    height: 100%;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    background-color: transparent;
-    opacity: 100%;
-    transition: all .7s ease;
-}
-.card div{
-    display: flex;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    flex-direction: column;
-    position: absolute;
-    background-color: transparent;
-}
-.card .card-title{
-    z-index: 5;
-    color: crimson;
-    position: absolute;
-    bottom: 0;
-}
-.card{
-    min-width: 150px;
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    height: 100%;
-    cursor: pointer;
-    flex: 0.1;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    transition: all 0.7s ease-out;
-    display: flex;
-    align-items: flex-end;
-}
-.card .card-Content{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: left;
-    background-color: transparent;
-}
-.card.active{
-    flex: 6;
-    filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
-    transform: translate(-1%,-1%);
-}
-.card.active img{
-    flex: 6;
-    opacity: 0%;
-    transition: all .825s ease;
+    color: rgb(var(--crimsonRed));
 }
 /*---------------------- Veille ----------------------*/
 .veille{
@@ -341,80 +143,16 @@ footer::before{
     grid-auto-rows: auto;
     justify-items: center;
     justify-content: space-between;
+    column-gap: clamp(0,2%,2%);
 }
 .gridVeille div{
     background-color: rgba(0, 0, 0, 0);
     transition: all 0.2s ease-in-out;
+    width: clamp(10%, 100%, 100%);
 }
-.gridVeille div:hover{
-    /* box-shadow: 0 0 25px #ffffff; */
-    filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
-    transform: translate(-2%,-2%);
-    background-color: rgba(0, 0, 0, 0);
-    transition: all 0.2s ease-in-out;
+.gridVeille div blockquote p{
+    box-sizing:border-box;
 }
-/*---------------------- Experiences ----------------------*/
-.experience{
-    background-image: url("/Img/Fond/cv.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.gridVeille div blockquote p{
+    word-wrap: break-word;
 }
-.Exp-Pro{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-}
-.formation{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-}
-.cv{
-    background-color: rgba(var(--Background), var(--alpha));
-    padding: 1%;
-    border-color: red;
-    border-style: groove;
-    font-variant: small-caps;
-    font-weight: 500;
-    /* transition: all 0.2s ease-in-out; */
-}
-/*---------------------- Epreuves ----------------------*/
-.epreuve{
-    background-image: url("/Img/Fond/epreuve.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.listing ul{
-    width: 80%;
-    margin: auto;
-    text-align:justify;
-}
-.listing ul p{
-    margin: 0 2rem 0 2rem;
-}
-.listing ul li{
-    margin: 0 2rem 0 3rem;
-}
-.listing span{
-    font-weight: bold;
-}
-/*---------------------- Git ----------------------*/
-
-/*---------------------- Projet ----------------------*/
-details{
-    cursor: pointer;
-    font-family: 'Lora', serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-/*---------------------- Main ----------------------*/

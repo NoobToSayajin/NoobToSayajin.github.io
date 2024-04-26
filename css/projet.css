@@ -1,35 +1,82 @@
-.projet-main{
-    background-image: url("../../Img/Fond/fndAcc.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    grid-template-columns: .2fr 1fr;
-    grid-template-areas:
-    "header header"
-    "menu menu"
-    "aside main"
-    "footer footer";
-    /* column-gap: 2rem; */
-    align-items: start;
+@media screen and (min-width:1024px){
+    .projet-main{
+        background-image: url("../../Img/Fond/fndAcc.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-template-columns: .2fr 1fr;
+        grid-template-areas:
+        "header header"
+        "menu menu"
+        "aside main"
+        "footer footer";
+        /* column-gap: 2rem; */
+        align-items: start;
+    }
+    .aside{
+        position: sticky;
+        top: 5%;
+    }
+    .projet-main .main li{
+        list-style: none;
+        padding-left: 7%;
+        padding-bottom: 0;
+    }
 }
-.aside{
-    position: sticky;
-    top: 5%;
+@media screen and (max-width:1023px){
+    .projet-main{
+        background-image: url("../../Img/Fond/fndAcc.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-template-areas:
+        "header "
+        "aside "
+        "main"
+        "footer";
+        align-items: start;
+    }
+    .index > h2{
+        padding-left: 32px;
+    }
+    .aside{
+        /* position: sticky; */
+        background-color: rgba(var(--Background), 1);
+        z-index: 10;
+        top: 1%;
+    }
+    .projet-main .main li{
+        list-style: none;
+        padding-left: 7%;
+        padding-bottom: 1rem;
+    }
+}
+.index > summary::marker{
+    content: none;
+}
+.index > summary::before{
+    content: '';
+}
+.index > summary{
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(var(--titleRed));
+    padding-left: 5%;
 }
 .aside hr{
-    border-color: red;
+    border-color: rgb(var(--titleRed));
 }
 .aside a, .projet-main .main a{
     text-decoration: none;
-    color: crimson;
-}
-.projet-main .main li{
-    list-style: none;
-    padding-left: 7%;
+    color: rgb(var(--crimsonRed));
 }
 .projet-main .main .projetDiv{
     background-color: transparent;
@@ -46,9 +93,10 @@
 }
 .projet-main .main li::before{
     content: "⇒ ";
+    color: rgb(var(--crimsonRed));
 }
 .projet-main .main h3{
-    color: crimson;
+    color: rgb(var(--crimsonRed));
 }
 .projet-main .main h4{
     padding-left: 10%;

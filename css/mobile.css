@@ -155,6 +155,64 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+    /*---------------------- Experiences ----------------------*/
+    .experience{
+        background-image: url("/Img/Fond/cv.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .Exp-Pro{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .formation{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .cv{
+        background-color: rgba(var(--Background), var(--alpha));
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 98vw;
+        border-color: red;
+        border-style: groove;
+        font-variant: small-caps;
+        font-weight: 500;
+        /* transition: all 0.2s ease-in-out; */
+    }
+    /*---------------------- Epreuves ----------------------*/
+    .epreuve{
+        background-image: url("/Img/Fond/epreuve.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .listing ul{
+        width: 80%;
+        margin: auto;
+        text-align:justify;
+    }
+    .listing ul p{
+        margin: 0 2rem 0 2rem;
+    }
+    .listing ul li{
+        margin: 0 2rem 0 3rem;
+    }
+    .listing span{
+        font-weight: bold;
+    }
     /*---------------------- Projet ----------------------*/
     .projet{
         background-image: url("/Img/Fond/projet.png");

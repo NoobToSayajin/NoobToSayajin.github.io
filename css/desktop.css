@@ -282,12 +282,17 @@
         width: 80%;
         margin: auto;
         text-align:justify;
+        list-style: none;
     }
     .listing ul p{
         margin: 0 2rem 0 2rem;
     }
     .listing ul li{
         margin: 0 2rem 0 3rem;
+    }
+    .listing ul li::before{
+        content: "⇒ ";
+        color: rgb(var(--crimsonRed));
     }
     .listing span{
         font-weight: bold;

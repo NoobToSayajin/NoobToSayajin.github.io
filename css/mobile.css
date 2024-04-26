@@ -67,7 +67,7 @@
         box-shadow: -1px -1px 5px rgba(255,255,255,0.6), 1px 1px 5px rgba(0,0,0,0.3), inset -2px -2px 5px rgba(255,255,255,1), inset 2px 2px 4px rgba(0,0,0,0.3);
     }
     .burger::after{
-        color: red;
+        color: rgb(var(--titleRed));
     }
     .burgerIcon span{
         display: block;
@@ -206,12 +206,18 @@
         width: 80%;
         margin: auto;
         text-align:justify;
+        list-style: none;
     }
     .listing ul p{
         margin: 0 2rem 0 2rem;
     }
     .listing ul li{
         margin: 0 2rem 0 3rem;
+        padding-bottom: 1rem;
+    }
+    .listing ul li::before{
+        content: "⇒ ";
+        color: rgb(var(--crimsonRed));
     }
     .listing span{
         font-weight: bold;

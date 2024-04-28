@@ -9,6 +9,7 @@
 *{
     box-sizing: inherit;
     text-wrap: balance;
+    scroll-margin-top: 70px;
 }
 html{
     font-size: 1rem;

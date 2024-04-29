@@ -27,7 +27,37 @@
         padding-bottom: 0;
     }
 }
-@media only screen and (max-width:1023px){
+@media only screen and (min-width:768px) and (max-width: 1199px){
+    .projet-main{
+        background-image: url("../../Img/Fond/fndAcc.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        grid-template-columns: .40fr 1fr;
+        grid-template-areas:
+        "header header"
+        "menu menu"
+        "aside main"
+        "footer footer";
+        /* column-gap: 2rem; */
+        align-items: start;
+    }
+    .aside{
+        position: sticky;
+        text-align:left;
+        top: 5%;
+    }
+    .projet-main .main li{
+        list-style: none;
+        padding-left: 7%;
+        padding-bottom: 0;
+    }
+}
+@media only screen and (max-width:767px){
     .projet-main{
         background-image: url("../../Img/Fond/fndAcc.png");
         -webkit-background-size: cover;

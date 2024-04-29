@@ -144,7 +144,7 @@ body main p{
     grid-auto-rows: auto;
     justify-items: center;
     justify-content: space-between;
-    column-gap: clamp(0,2%,2%);
+    /* column-gap: clamp(0,2%,2%); */
 }
 .gridVeille div{
     background-color: rgba(0, 0, 0, 0);

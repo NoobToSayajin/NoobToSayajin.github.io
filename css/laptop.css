@@ -1,4 +1,4 @@
-@media only screen and (min-width:1200px){
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .mobile{
         width: 0;
         height: 0;
@@ -118,17 +118,17 @@
         background-position: right;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        grid-template-columns: 60% 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-        "header header"
-        "menu menu"
-        "main aside"
-        "footer footer";
+        "header"
+        "menu"
+        "main"
+        "footer";
     }
     .acceuil main{
         overflow-y: hidden;
         height: 80%;
-        width: 60%;
+        width: 80%;
         margin-bottom: 2rem;
         margin: 1rem auto 1rem auto;
         align-self: center;
@@ -139,18 +139,18 @@
     .acceuil .main li{
         padding-bottom: 0;
     }
-    /*---------------------- veille ----------------------*/
-    .gridVeille div:hover{
-        /* box-shadow: 0 0 25px #ffffff; */
-        filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
-        transform: translate(-2%,-2%);
-        background-color: rgba(0, 0, 0, 0);
-        transition: all 0.2s ease-in-out;
-    }
-    .gridVeille{
-        column-gap: 2%;
-    }
-    /*---------------------- Projet ----------------------*/
+/*---------------------- veille ----------------------*/
+.gridVeille div:hover{
+    /* box-shadow: 0 0 25px #ffffff; */
+    filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
+    transform: translate(-2%,-2%);
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+.gridVeille{
+    column-gap: 2%;
+}
+/*---------------------- Projet ----------------------*/
     .projet{
         background-image: url("/Img/Fond/projet.png");
         -webkit-background-size: cover;
@@ -163,7 +163,6 @@
     }
     .projet .main{
         padding-bottom: 4rem;
-        min-height: 60dvh;
     }
     .container{
         width: 90%;

@@ -1,0 +1,87 @@
+.color{
+    background-color: rgba(var(--blueTable), 1);
+    color: rgba(var(--Background), 1);
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+@media only screen and (min-width:768px){
+    table{
+    empty-cells: hide;
+    /* border-collapse: collapse; */
+    border: 2px solid black;
+    margin: 3%;
+    box-shadow: 10px 10px 10px rgba(var(--lightBlack), 1);
+    word-wrap: break-word;
+}
+    th, td{
+        border: 1px solid black;
+        border-spacing: 0px;
+        padding: 0 10px 0 10px;
+        max-height: 40%;
+    }
+    .vertical{
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        font-size: .8rem;
+    }
+    .synthese .Btn{
+        margin-left: 7%;
+    }
+}
+@media only screen and (max-width:767px){
+    .synthese .Btn{
+        margin-left: 5%;
+    }
+    .synthese .main ul{
+        list-style: none;
+    }
+/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr{ 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr{ border: 1px solid #ccc; }
+	
+	td{ 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%;
+        text-align: left;
+	}
+	
+	td:before { 
+        /* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	.tb-synthese td:nth-of-type(1):before { content: "Réalisations professionnelles"; }
+	.tb-synthese td:nth-of-type(2):before { content: "Période"; }
+	.tb-synthese td:nth-of-type(3):before { content: "Gérer le patrimoine informatique"; }
+	.tb-synthese td:nth-of-type(4):before { content: "Répondre aux incidents et aux demandes d’assistance et d’évolution"; }
+	.tb-synthese td:nth-of-type(5):before { content: "Développer la présence en ligne de l’organisation"; }
+	.tb-synthese td:nth-of-type(6):before { content: "Travailler en mode projet"; }
+	.tb-synthese td:nth-of-type(7):before { content: "Mettre à disposition des utilisateurs un service informatique"; }
+	.tb-synthese td:nth-of-type(8):before { content: "Organiser son développement professionnel"; }
+}

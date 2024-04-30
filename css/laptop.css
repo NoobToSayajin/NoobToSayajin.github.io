@@ -115,7 +115,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: right;
+        background-position: 75%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         grid-template-columns: 1fr;
@@ -157,12 +157,12 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: right;
+        background-position: 75%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
     .projet .main{
-        padding-bottom: 4rem;
+        padding-bottom: 5em;
     }
     .container{
         width: 90%;
@@ -170,6 +170,10 @@
         display: flex;
         gap: 10px;
         background-color: transparent;
+        flex-wrap: wrap;
+    }
+    .container > * {
+        flex:1 1 100%;
     }
     .one{
         background-image: url("/Img/Projet/Cards/dataone-2.png");
@@ -181,6 +185,10 @@
     }
     .three{
         background-image: url("/Img/Projet/Cards/netforge_2.png");
+        background-color: transparent;
+    }
+    .four{
+        background-image: url("/Img/Projet/Cards/synthese-2.png");
         background-color: transparent;
     }
     .card img{
@@ -212,7 +220,7 @@
         bottom: 0;
     }
     .card{
-        min-width: 150px;
+        min-width: 125px;
         background-size: cover;
         background-position: left;
         background-repeat: no-repeat;
@@ -280,7 +288,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: center;
+        background-position: 75%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
@@ -309,5 +317,39 @@
         font-family: 'Lora', serif;
         font-weight: bold;
         font-size: 1.2rem;
+    }
+    /*---------------------- synthese ----------------------*/
+    .synthese{
+        background-image: url("/Img/Fond/epreuve.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .synthese .main div{
+        overflow-x: auto;
+    }
+    .synthese .main ul{
+        width: 80%;
+        margin: auto;
+        text-align:justify;
+        list-style: none;
+    }
+    .synthese .main ul p{
+        margin: 0 2rem 0 2rem;
+    }
+    .synthese .main ul li{
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+    .synthese .main ul li::before{
+        content: "⇒ ";
+        color: rgb(var(--crimsonRed));
+    }
+    .synthese .main span{
+        font-weight: bold;
     }
 }

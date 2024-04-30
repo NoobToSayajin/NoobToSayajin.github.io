@@ -2,12 +2,12 @@
     color: red;
 }
 @media only screen and (min-width:1024px){
-        table{
-        empty-cells: hide;
-        /* border-collapse: collapse; */
-        border: 2px solid black;
-        margin-left: 10%;
-        box-shadow: 10px 10px 10px rgba(var(--lightBlack), 1);
+	table{
+	empty-cells: hide;
+	/* border-collapse: collapse; */
+	border: 2px solid black;
+	margin-left: 10%;
+	box-shadow: 10px 10px 10px rgba(var(--lightBlack), 1);
     }
     th, td{
         border: 1px solid black;

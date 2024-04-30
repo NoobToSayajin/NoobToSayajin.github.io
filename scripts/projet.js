@@ -19,4 +19,5 @@ cards.forEach((card) => {
     document.querySelector(".one").onclick = function() {document.location.href = '/index.html';}
     document.querySelector(".two").onclick = function() {document.location.href = '/index.html';}
     document.querySelector(".three").onclick = function() {document.location.href = '/Nav/Projet/main.html';}
+    document.querySelector(".four").onclick = function() {document.location.href = '/Nav/synthese.html';}
 });

@@ -202,7 +202,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: center;
+        background-position: 75%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
@@ -249,6 +249,7 @@
         'card-one'
         'card-two'
         'card-three'
+        'card-four'
         ;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 20px;
@@ -264,6 +265,10 @@
     }
     .card.three{
         grid-area: card-three;
+        height: 100%;
+    }
+    .card.four{
+        grid-area: card-four;
         height: 100%;
     }
     .card{
@@ -300,5 +305,16 @@
         padding: 0;
         margin: 0;
         background-color: transparent;
+    }
+    /*---------------------- synthese ----------------------*/
+    .synthese{
+        background-image: url("/Img/Fond/epreuve.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 }

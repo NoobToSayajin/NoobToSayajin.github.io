@@ -59,6 +59,8 @@
     menu li a:hover{
         background-color: #111;
         border-bottom: 2px solid rgb(var(--Background));
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
     /*---------------------- Footer ----------------------*/
     footer::before{
@@ -171,6 +173,10 @@
         display: flex;
         gap: 10px;
         background-color: transparent;
+        flex-wrap: wrap;
+    }
+    .container > * {
+        flex:1 1 100%;
     }
     .one{
         background-image: url("/Img/Projet/Cards/dataone-2.png");
@@ -182,6 +188,10 @@
     }
     .three{
         background-image: url("/Img/Projet/Cards/netforge_2.png");
+        background-color: transparent;
+    }
+    .four{
+        background-image: url("/Img/Projet/Cards/synthese-2.png");
         background-color: transparent;
     }
     .card img{
@@ -238,6 +248,12 @@
         flex: 6;
         filter: drop-shadow(10px 10px 10px rgba(var(--lightBlack), 1));
         transform: translate(-1%,-1%);
+    }
+    .card.active h3{
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        padding: .5rem 1rem .5rem 1rem;
+        border-radius: 1rem;
     }
     .card.active img{
         flex: 6;
@@ -310,5 +326,39 @@
         font-family: 'Lora', serif;
         font-weight: bold;
         font-size: 1.2rem;
+    }
+    /*---------------------- synthese ----------------------*/
+    .synthese{
+        background-image: url("/Img/Fond/epreuve.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .synthese .main div{
+        overflow-x: auto;
+    }
+    .synthese .main ul{
+        width: 80%;
+        margin: auto;
+        text-align:justify;
+        list-style: none;
+    }
+    .synthese .main ul p{
+        margin: 0 2rem 0 2rem;
+    }
+    .synthese .main ul li{
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+    .synthese .main ul li::before{
+        content: "⇒ ";
+        color: rgb(var(--crimsonRed));
+    }
+    .synthese .main span{
+        font-weight: bold;
     }
 }

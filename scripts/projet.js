@@ -16,8 +16,8 @@ cards.forEach((card) => {
     });
         card.classList.add("active");
     });
-    document.querySelector(".one").onclick = function() {document.location.href = '/index.html';}
-    document.querySelector(".two").onclick = function() {document.location.href = '/index.html';}
+    document.querySelector(".one").onclick = function() {document.location.href = '/pdf/DataOne.pdf';}
+    document.querySelector(".two").onclick = function() {document.location.href = '/pdf/Mairie.pdf';}
     document.querySelector(".three").onclick = function() {document.location.href = '/Nav/Projet/main.html';}
     document.querySelector(".four").onclick = function() {document.location.href = '/Nav/synthese.html';}
 });
